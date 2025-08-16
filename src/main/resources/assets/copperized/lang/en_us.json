@@ -1,0 +1,16 @@
+{
+	"item.copperized.copper_staff": "Copper Staff",
+	"item.copperized.copper_sword": "Copper Sword",
+	"item.copperized.copper_shovel": "Copper Shovel",
+	"item.copperized.copper_pickaxe": "Copper Pickaxe",
+	"item.copperized.copper_axe": "Copper Axe",
+	"item.copperized.copper_hoe": "Copper Hoe",
+
+	"item.copperized.conductible_copper_helmet": "Conductible Copper Helmet",
+	"item.copperized.copper_helmet": "Copper Helmet",
+	"item.copperized.copper_chestplate": "Copper Chestplate", 
+	"item.copperized.copper_leggings": "Copper Leggings",
+	"item.copperized.copper_boots": "Copper Boots",
+
+	"text.copperized.charged": "Charged"
+}

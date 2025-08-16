@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "copperized",
+	"version": "${version}",
+	"name": "Copperized",
+	"description": "Adding a some cool functionality to copper to make it more interesting.",
+	"authors": [
+		"Vodculen"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/copperized/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.vodculen.copperized.Copperized"
+		],
+		"client": [
+			"net.vodculen.copperized.CopperizedClient"
+		],
+		"fabric-datagen": [
+			"net.vodculen.copperized.CopperizedDataGenerator"
+		]
+	},
+	"mixins": [
+		"copperized.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

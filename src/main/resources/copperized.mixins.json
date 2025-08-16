@@ -1,0 +1,17 @@
+{
+	"required": true,
+	"package": "net.vodculen.copperized.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"LightningStruckEntityMixin"
+	],
+	"client": [
+		"LivingEntityRendererMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotations": true
+	}
+}
