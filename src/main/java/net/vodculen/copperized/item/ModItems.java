@@ -68,5 +68,10 @@ public class ModItems {
 		entires.addAfter(Items.TRIDENT, ModItems.COPPER_STAFF);
 		entires.addAfter(Items.STONE_SWORD, ModItems.COPPER_SWORD);
 		entires.addAfter(Items.STONE_AXE, ModItems.COPPER_AXE);
+
+		entires.addAfter(Items.CHAINMAIL_BOOTS, ModItems.COPPER_HELMET);
+		entires.addAfter(ModItems.COPPER_HELMET, ModItems.COPPER_CHESTPLATE);
+		entires.addAfter(ModItems.COPPER_CHESTPLATE, ModItems.COPPER_LEGGINGS);
+		entires.addAfter(ModItems.COPPER_LEGGINGS, ModItems.COPPER_BOOTS);
 	}
 }
