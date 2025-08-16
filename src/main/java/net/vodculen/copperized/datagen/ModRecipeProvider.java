@@ -17,6 +17,17 @@ public class ModRecipeProvider extends FabricRecipeProvider {
 
 	@Override
 	public void generate(Consumer<RecipeJsonProvider> exporter) {
+		// Copper Staff
+		ShapedRecipeJsonBuilder.create(RecipeCategory.TOOLS, ModItems.COPPER_STAFF)
+			.pattern("   ")
+			.pattern(" # ")
+			.pattern(" | ")
+			.input('#', Items.LIGHTNING_ROD)
+			.input('|', Items.STICK)
+			.criterion(hasItem(Items.LIGHTNING_ROD), conditionsFromItem(Items.LIGHTNING_ROD))
+			.offerTo(exporter)
+			;
+
 		// Sword Recipes
 		ShapedRecipeJsonBuilder.create(RecipeCategory.COMBAT, ModItems.COPPER_SWORD)
 			.pattern(" # ")

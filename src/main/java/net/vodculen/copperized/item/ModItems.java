@@ -1,9 +1,13 @@
 package net.vodculen.copperized.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
+import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
+import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.Settings;
+import net.minecraft.item.ItemGroups;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
@@ -47,5 +51,22 @@ public class ModItems {
 
 	public static void registerModItems() {
 		Copperized.LOGGER.info("Registering Mod Items for " + Copperized.MOD_ID);
+
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::toolsItemGroup);
+		ItemGroupEvents.modifyEntriesEvent(ItemGroups.COMBAT).register(ModItems::combatItemGroup);
+	}
+
+	// Item Groups
+	private static void toolsItemGroup(FabricItemGroupEntries entires) {
+		entires.addAfter(Items.STONE_HOE, ModItems.COPPER_SHOVEL);
+		entires.addAfter(ModItems.COPPER_SHOVEL, ModItems.COPPER_PICKAXE);
+		entires.addAfter(ModItems.COPPER_PICKAXE, ModItems.COPPER_AXE);
+		entires.addAfter(ModItems.COPPER_AXE, ModItems.COPPER_HOE);
+	}
+
+	private static void combatItemGroup(FabricItemGroupEntries entires) {
+		entires.addAfter(Items.TRIDENT, ModItems.COPPER_STAFF);
+		entires.addAfter(Items.STONE_SWORD, ModItems.COPPER_SWORD);
+		entires.addAfter(Items.STONE_AXE, ModItems.COPPER_AXE);
 	}
 }
